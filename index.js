@@ -6,8 +6,10 @@
 // });
 
 $(document).ready(function() {
-animateDiv();
 
+// $("#member-tab").hide();
+// $("#syllabus-tab").hide();
+animateDiv();
 });
 let RATIO = 0.9;
 function limitNumberWithinRange(num, min, max){
@@ -98,3 +100,62 @@ function limitNumberWithinRange(num, min, max){
         return speed;
     
     }
+
+
+
+var activeTab = 0;
+var pages = [0,1,2];
+
+var page_ids = ["#home-tab", "#syllabus-tab", "#member-tab"];
+
+$("#home-button").on('click', function () {
+    if(activeTab !== 0){
+        var page = page_ids[0];
+
+        for(id of page_ids){
+            if(id !== page){
+                $(id).hide();
+            }else{
+                $(id).show();
+            }
+        }
+        activeTab = 0;
+    }
+});
+$("#syllabus-button").on('click', function () {
+    if(activeTab !== 1){
+        var page = page_ids[1];
+
+        for(id of page_ids){
+            if(id !== page){
+                $(id).hide();
+            }else{
+                $(id).show();
+            }
+        }
+        activeTab = 1;
+    }
+});
+$("#member-button").on('click', function () {
+    if(activeTab !== 2){
+        var page = page_ids[2];
+
+        for(id of page_ids){
+            if(id !== page){
+                $(id).hide();
+            }else{
+                $(id).show();
+            }
+        }
+        activeTab = 2;
+    }
+});
+// $(".nav-button").on('click', function () {
+// var currentPage = location.pathname,
+//         idx = pages.indexOf(currentPage),
+//         newIndex, failOver;
+// if (idx > -1) {
+//         newIndex = $(this).hasClass("next") ? ++idx : --idx;
+//         failOver = $(this).hasClass("next") ? 0 : 2;
+//         location.pathname = pages[newIndex] || pages[failOver];
+// }
