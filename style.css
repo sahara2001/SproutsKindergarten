@@ -31,12 +31,12 @@ header
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: 'Adelia', san-serif;
+  font-family: Adelia, san-serif !important;
 }
 header a{
   font-family: 'Adelia', san-serif;
 }
-header-tab {
+.header-tab {
   font-family: 'Adelia', san-serif;
 }
 header .logo
