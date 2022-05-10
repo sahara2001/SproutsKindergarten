@@ -5,8 +5,8 @@
 } */
 
 @font-face {
-  font-family:'Adelia';
-  src: local("static/font/ADELIA.otf") format("opentype");
+  font-family:Adelia;
+  src: url("static/font/Adelia.otf") format("opentype");
 }
 @font-face {
   font-family:'Janda';
@@ -16,7 +16,7 @@
     box-sizing: border-box;
     margin:0;
     padding:0;
-    font-family: 'Adelia', 'Poppins' ,san-serif;
+    font-family: Adelia, 'Poppins' ,san-serif;
 }
 
 
@@ -34,10 +34,10 @@ header
   font-family: Adelia, san-serif !important;
 }
 header a{
-  font-family: 'Adelia', san-serif;
+  font-family: Adelia, san-serif;
 }
 .header-tab {
-  font-family: 'Adelia', san-serif;
+  font-family: Adelia, san-serif;
 }
 header .logo
 {
