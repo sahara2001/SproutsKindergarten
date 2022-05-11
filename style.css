@@ -406,7 +406,19 @@ ul li{
   font-size:0.5em;
 }
 
-
+#syllabus-tab {
+    /* background-image: url('static/image/syllabus_back.jpeg');
+    background-size: cover; */
+}
+.syllabus-img {
+  position:fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  height:100%;
+  z-index: 2001;
+  object-fit: cover;
+}
 
 /* #butterfly1 {
   position: absolute;
