@@ -121,6 +121,7 @@ $("#home-button").on('click', function () {
         }
         activeTab = 0;
     }
+    $(".butterfly").show();
 });
 $("#syllabus-button").on('click', function () {
     if(activeTab !== 1){
@@ -135,6 +136,7 @@ $("#syllabus-button").on('click', function () {
         }
         activeTab = 1;
     }
+    $(".butterfly").hide();
 });
 $("#member-button").on('click', function () {
     if(activeTab !== 2){
@@ -149,6 +151,7 @@ $("#member-button").on('click', function () {
         }
         activeTab = 2;
     }
+    $(".butterfly").hide();
 });
 // $(".nav-button").on('click', function () {
 // var currentPage = location.pathname,
@@ -159,3 +162,176 @@ $("#member-button").on('click', function () {
 //         failOver = $(this).hasClass("next") ? 0 : 2;
 //         location.pathname = pages[newIndex] || pages[failOver];
 // }
+// document.onmousemove = function(e){
+//     var x = e.pageX;
+//     var y = e.pageY;
+//     e.target.title = "X is "+x+" and Y is "+y;
+//     };
+
+// image = new MarvinImage();
+// image.load("https://i.imgur.com/eLZVbQG.png", imageLoaded);
+
+// function imageLoaded(){
+//     console.log("(0,0): "+(image.getAlphaComponent(0,0) > 0 ? "NOT_TRANSPARENT" : "TRANSPARENT"));
+//     console.log("(150,150): "+(image.getAlphaComponent(150,150) > 0 ? "NOT_TRANSPARENT" : "TRANSPARENT"));
+// }
+// var img = document.getElementById('my-image');
+// var canvas = document.createElement('canvas');
+// canvas.width = img.width;
+// canvas.height = img.height;
+// canvas.getContext('2d').drawImage(img, 0, 0, img.width, img.height);
+var delay = function (elem, callback) {
+    var timeout = null;
+    elem.onmouseover = function() {
+        // Set timeout to be a timer which will invoke callback after 1s
+        timeout = setTimeout(callback, 500);
+    };
+
+    // elem.onmouseout = function() {
+    //     // Clear any timers set to timeout
+    //     clearTimeout(timeout);
+    // }
+};
+var pixelCount = [0,0,0,0,0,0]
+$(function() {
+
+    $('.member-img').mousemove(function(e) {
+    // delay($('.member-img'), function(e) {
+        if(!this.canvas) {
+            this.canvas = $('<canvas />')[0];
+            this.canvas.width = this.width;
+            this.canvas.height = this.height;
+            this.canvas.getContext('2d').drawImage(this, 0, 0, this.width, this.height);
+        }
+        // console.log(1);
+        var pixelData = this.canvas.getContext('2d').getImageData(e.offsetX, e.offsetY, 1, 1).data;
+        // console.log('R: ' + pixelData[0] + '<br>G: ' + pixelData[1] + '<br>B: ' + pixelData[2] + '<br>A: ' + pixelData[3]);
+        if(pixelData[3] >0) {
+            // $('.dialogue')
+            if(pixelData[3]===1){
+                if(pixelCount[0]<3){
+                    pixelCount[0] += 1;
+                }else{
+
+                
+                const box = document.getElementById('dialogue1');
+                box.style.top = "55%";
+                box.style.left = "43%";
+                $('#dialogue1').show();
+                $('#dialogue2').hide();
+                $('#dialogue3').hide();
+                $('#dialogue4').hide();
+                $('#dialogue5').hide();
+                $('#dialogue6').hide();
+                }
+                // $('.dialogue-text').show();
+            }else if(pixelData[3]===2){
+                if(pixelCount[1]<3){
+                    pixelCount[1] += 1;
+                }else{
+                const box = document.getElementById('dialogue2');
+                box.style.top = "50%";
+                box.style.left = "50%";
+                $('#dialogue2').show();
+                $('#dialogue1').hide();
+            // $('#dialogue2').hide();
+            $('#dialogue3').hide();
+            $('#dialogue4').hide();
+            $('#dialogue5').hide();
+            $('#dialogue6').hide();
+                }
+                // $('.dialogue-text').show();
+            }else if(pixelData[3]===3){
+                if(pixelCount[2]<3){
+                    pixelCount[2] += 1;
+                }else{
+                const box = document.getElementById('dialogue3');
+                box.style.top = "40%";
+                box.style.left = "55%";
+                $('#dialogue3').show();
+                $('#dialogue1').hide();
+            $('#dialogue2').hide();
+            // $('#dialogue3').hide();
+            $('#dialogue4').hide();
+            $('#dialogue5').hide();
+            $('#dialogue6').hide();
+            }
+                // $('.dialogue-text').show();
+            }else if(pixelData[3]===4){
+                if(pixelCount[3]<3){
+                    pixelCount[3] += 1;
+                }else{
+                const box = document.getElementById('dialogue4');
+                box.style.top = "35%";
+                box.style.left = "64%";
+                $('#dialogue4').show();
+                $('#dialogue1').hide();
+            $('#dialogue2').hide();
+            $('#dialogue3').hide();
+            // $('#dialogue4').hide();
+            $('#dialogue5').hide();
+            $('#dialogue6').hide();
+                }
+                // $('.dialogue-text').show();
+            }else if(pixelData[3]===5){
+                if(pixelCount[4]<3){
+                    pixelCount[4] += 1;
+                }else{
+                const box = document.getElementById('dialogue5');
+                box.style.top = "10%";
+                box.style.left = "70%";
+                $('#dialogue5').show();
+                $('#dialogue1').hide();
+            $('#dialogue2').hide();
+            $('#dialogue3').hide();
+            $('#dialogue4').hide();
+            // $('#dialogue5').hide();
+            $('#dialogue6').hide();
+            }
+        }
+            else if(pixelData[3]===6){
+                if(pixelCount[5]<3){
+                    pixelCount[5] += 1;
+                }else{
+                const box = document.getElementById('dialogue6');
+                box.style.top = "10%";
+                box.style.left = "80%";
+                $('#dialogue6').show();
+                $('#dialogue1').hide();
+            $('#dialogue2').hide();
+            $('#dialogue3').hide();
+            $('#dialogue4').hide();
+            $('#dialogue5').hide();
+                }
+            // $('#dialogue6').hide();
+            }
+
+            
+            // const box = document.getElementById('dialogue');
+            // box.style.top = (e.offsetY -100) +"px";
+            // box.style.left = (e.offsetX -100) + "px";
+            
+        }else{
+            pixelCount[0] = 0;
+            pixelCount[1] = 0;
+            pixelCount[2] = 0;
+            pixelCount[3] = 0;
+            pixelCount[4] = 0;
+            pixelCount[5] = 0;
+            $('#dialogue1').hide();
+            $('#dialogue2').hide();
+            $('#dialogue3').hide();
+            $('#dialogue4').hide();
+            $('#dialogue5').hide();
+            $('#dialogue6').hide();
+            $('.dialogue-box').hide();
+            // $('.dialogue-text').hide();
+        }
+        
+    }
+    
+    );
+    
+    
+    
+});
