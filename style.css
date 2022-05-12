@@ -380,11 +380,11 @@ ul li{
     top: 0;
     left:0;
     width:11%;
-    height:22%;
+    height:32%;
     z-index: 10;
     margin:5px;
-    padding:10px;
-    padding-right: 50px;
+    padding:15px;
+    padding-right: 30px;
 
 
     /* word-wrap: break-word; */
@@ -394,7 +394,7 @@ ul li{
     word-break: break-all;
     /* white-space: normal; */
     word-wrap: break-word;
-    font-size:0.6em;
+    font-size:0.8em;
 }
 .dialogue-text {
   word-wrap: break-word;
@@ -403,7 +403,7 @@ ul li{
   /* font-family: Adelia, san-serif !important; */
   word-break: break-all;
   white-space: normal;
-  font-size:0.5em;
+  font-size:0.7em;
 }
 
 #syllabus-tab {
