@@ -41,7 +41,7 @@ header a{
 }
 header .logo
 {
-  color: #fff;
+  color: rgb(243, 236, 236);
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -103,28 +103,35 @@ header .logo
   position: relative;
   z-index: 10;
 }
-
+h2
+{
+  font-size: 2.4em;
+  font-weight: 800;
+  color: rgb(240, 233, 233);
+  line-height: 1em;
+  text-transform: uppercase;
+}
 .text h2
 {
-  font-size: 4em;
+  font-size: 2.4em;
   font-weight: 800;
-  color: #fff;
+  color: rgb(240, 234, 234);
   line-height: 1em;
   text-transform: uppercase;
 }
 .text h3
 {
-  font-size: 2em;
+  font-size: 1.6em;
   font-weight: 700;
-  color: #fff;
+  color: rgb(243, 236, 236);
   line-height: 1em;
   text-transform: uppercase;
 }
 .text p
 {
   font-size: 1em;
-  color: #fff;
-  margin: 20px 0;
+  color: rgb(240, 233, 233);
+  margin: 10px 0;
   font-weight: 400;
   max-width: 700px;
 }
@@ -132,7 +139,7 @@ header .logo
 {
   display: inline-block;
   font-size: 1em;
-  background: #fff;
+  background: rgb(243, 240, 240);
   padding: 10px 30px;
   text-transform: uppercase;
   text-decoration: none;
@@ -216,11 +223,11 @@ header .logo
   }
   .text h2
   {
-    font-size: 3em;
+    font-size: 2.4em;
   }
   .text h3
   {
-    font-size: 2em;
+    font-size: 1.6em;
   }
 }
 
@@ -234,7 +241,7 @@ header .logo
   right: 0;
   width: 100%;
   /* min-height: 100vh; */
-  padding: 25px;
+  padding: 10px;
   /* display: grid; */
   justify-content: space-between;
   align-items: center;
@@ -269,21 +276,21 @@ header .logo
   height:100%;
   float:right; 
   text-align: right;
-  color: #fff;
+  color: rgb(243, 235, 235);
   position: relative;
 }
 
 a {
   padding: 0.5em 0.5em 0.5em;
   text-decoration: none;
-  color: #fff;
+  color: rgb(245, 238, 238);
 }
 ul {
   
   list-style-type: none;
-  color: #fff;
-  -webkit-text-fill-color: #FFFFFF;
-  margin:20px;
+  color: rgb(241, 234, 234);
+  -webkit-text-fill-color: #f3efef;
+  margin:8px;
   font-size: 1.5em;
 
   
@@ -307,14 +314,16 @@ ul li{
 
 .content h2{
   font-family: 'Janda', san-serif;
-  margin-top: 6px;
-  margin-bottom: 6px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  font-size:2.4em;
 }
-/* .content h3{
+.content h3{
   font-family: 'Janda', san-serif;
-  margin-top: 5px;
-  margin-bottom: 5px;
-} */
+  font-size:1.6em;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
 
 /* 
 .butterfly1 {
@@ -388,7 +397,7 @@ ul li{
 
 
     /* word-wrap: break-word; */
-  -webkit-text-fill-color: #FFFFFF;
+  -webkit-text-fill-color: #f1ebeb;
     align-items: left;
     font-family: Janda, san-serif !important;
     word-break: break-all;
