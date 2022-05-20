@@ -122,6 +122,7 @@ $("#home-button").on('click', function () {
         activeTab = 0;
     }
     $(".butterfly").show();
+    $("#member-img").hide();
 });
 $("#syllabus-button").on('click', function () {
     if(activeTab !== 1){
@@ -137,6 +138,7 @@ $("#syllabus-button").on('click', function () {
         activeTab = 1;
     }
     $(".butterfly").hide();
+    $("#member-img").hide();
 });
 $("#member-button").on('click', function () {
     if(activeTab !== 2){
@@ -152,6 +154,7 @@ $("#member-button").on('click', function () {
         activeTab = 2;
     }
     $(".butterfly").hide();
+    $("#member-img").show();
 });
 // $(".nav-button").on('click', function () {
 // var currentPage = location.pathname,

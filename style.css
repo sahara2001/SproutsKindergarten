@@ -20,6 +20,7 @@
 }
 
 
+
 header
 {
   position: absolute;
@@ -214,22 +215,38 @@ h2
   color: #03a9f4; 
 }
 
-@media (max-width: 991px)
+@media only screen and (max-width: 661px)
 {
   .showcase,
   .showcase header
   {
     padding: 40px;
   }
-  .text h2
+  .content h2
   {
-    font-size: 2.4em;
+    font-size: 1.8em;
   }
-  .text h3
+  .content h3
   {
-    font-size: 1.6em;
+    font-size: 1.2em;
+  }
+  .content p
+  {
+    font-size: 0.8em;
+  }
+
+  .margin-top {
+    margin-top: 50px;
+    padding-top: 70px;
+  }
+  .title-tab {
+    padding-left: 10px;
   }
 }
+/* .margin-top {
+  margin-top: 1%;
+  padding-top: 2%;
+} */
 
 .logo-image {
   height: 60px;
@@ -374,14 +391,16 @@ ul li{
     object-fit: cover;
 }
 
-.dialogue {
+.dialogue
+{
     position:fixed;
     width:12%;
     height:10%;
     z-index: 1000;
     object-fit: cover;
 }
-.dialogue-box {
+.dialogue-box 
+{
     background-image: url(static/image/dialogue.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -429,6 +448,46 @@ ul li{
   object-fit: cover;
 }
 
+.navbar
+{
+    background-color: transparent;
+}
+.social-img
+{
+  margin-right:20px;
+  height:50px;
+  width:50px;
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+ 
+.container-fluid{
+  height:100%;
+  display:table;
+  width: 100%;
+  padding: 0;
+}
+ 
+.row-fluid {height: 100%; display:table-cell; vertical-align: middle; 
+
+  /* word-break:break-all;  */
+}
+ 
+ .title-main {
+  font-size:2em;
+ }
+
+.centering {
+  float:none;
+  margin:0 auto;
+}
 /* #butterfly1 {
   position: absolute;
   left: 100px;
