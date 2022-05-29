@@ -11,7 +11,7 @@ $(document).ready(function() {
 // $("#syllabus-tab").hide();
 animateDiv();
 });
-let RATIO = 0.9;
+let RATIO = 0.1;
 function limitNumberWithinRange(num, min, max){
         const MIN = min || 1;
         const MAX = max || 20;
@@ -29,8 +29,8 @@ function limitNumberWithinRange(num, min, max){
         
         var minhw = Math.min(h,w)
         // movement amount
-        var nh = Math.floor((Math.random()-0.5)*2 * minhw * scale) ;
-        var nw = Math.floor((Math.random()-0.5)*2 * minhw * scale) ;
+        var nh = (Math.random()-0.5)*2 * minhw * scale ;
+        var nw = (Math.random()-0.5)*2 * minhw * scale ;
 
         var left = $container.css("left");
         var top = $container.css("top");
