@@ -370,17 +370,15 @@ ul li{
 
 
 .butterfly1 {
-  position:absolute;
+
   left: -20px;
   top: 40px;
 }
 .butterfly2 {
-  position:absolute;
   left: 10px;
   top: -23px;
 }
 .butterfly3 {
-  position:absolute;
   left: 200px;
   top: 60px;
 }
