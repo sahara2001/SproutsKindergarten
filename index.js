@@ -11,10 +11,10 @@ $(document).ready(function() {
 // $("#syllabus-tab").hide();
 animateDiv();
 });
-let RATIO = 0.1;
+let RATIO = 0.2;
 function limitNumberWithinRange(num, min, max){
-        const MIN = min || 1;
-        const MAX = max || 20;
+        const MIN = min ;
+        const MAX = max;
         const parsed = parseInt(num)
         return Math.min(Math.max(parsed, MIN), MAX)
       }
@@ -24,29 +24,32 @@ function limitNumberWithinRange(num, min, max){
         // Get viewport dimensions (remove the dimension of the div)
         //console.log($container.css("left"));
         $container = ($container || $(window))
-        var h = $container.height() - 50;
-        var w = $container.width() - 50;
-        
-        var minhw = Math.min(h,w)
+        var h = $(window).height();
+        var w = $(window).width();
+        // console.log($(window).height());
+        var minhw = Math.min(h,w);
+        // console.log(minhw + " " + h + " " + w);
         // movement amount
         var nh = (Math.random()-0.5)*2 * minhw * scale ;
         var nw = (Math.random()-0.5)*2 * minhw * scale ;
 
         var left = $container.css("left");
         var top = $container.css("top");
-        var topLen = parseInt("0" + top.substring(0,top.length-2));
-        var leftLen = parseInt("0" + left.substring(0,left.length-2));
+        var topLen = 0; //parseInt("0" + top.substring(0,top.length-2));
+        var leftLen = 0; //parseInt("0" + left.substring(0,left.length-2));
 
-        var offh = offset.top - topLen;
-        var offw = offset.left - leftLen;
+        var offh = offset.top ;
+        var offw = offset.left ;
 
         
         var moveh = limitNumberWithinRange(offh+nh, 0, h);
         var movew = limitNumberWithinRange(offw+nw, 0, w);
         // console.log(offset);
 
+        // console.log(top + " " + left + " " + nh + "  " + nw);
+        // console.log(offh + " " + offw + " "  + ""+ moveh + " " +movew);
         // console.log(topLen);
-        return [moveh +topLen, movew + leftLen];
+        return [moveh , movew ];
     
     }
     function animateDivSub($target, scale) {
